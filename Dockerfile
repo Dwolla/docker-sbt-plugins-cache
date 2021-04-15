@@ -3,7 +3,7 @@ LABEL maintainer="Dwolla Dev <dev+sbt@dwolla.com>"
 LABEL org.label-schema.vcs-url="https://github.com/Dwolla/docker-sbt-version-cache"
 
 USER root
-ENV SBT_VERSION=1.1.1 \
+ENV SBT_VERSION=1.5.0 \
     SBT_HOME=/usr/local/sbt
 ENV PATH=${SBT_HOME}/bin:${PATH}
 
@@ -20,3 +20,4 @@ FROM scratch
 COPY --from=downloader /usr/local/sbt /usr/local/sbt
 COPY --from=downloader /root/.ivy2 /root/.ivy2
 COPY --from=downloader /root/.sbt /root/.sbt
+COPY --from=downloader /root/.cache/coursier/v1 /root/.cache/coursier/v1
