@@ -2,8 +2,8 @@ lazy val buildSettings = Seq(
   name := "fake-project",
   organization := "com.dwolla",
   version := "0.0.1",
-  scalaVersion := "2.12.13",
-  crossScalaVersions := Seq("2.12.13", "2.13.5"),
+  scalaVersion := "2.12.14",
+  crossScalaVersions := Seq("2.12.14", "2.13.6"),
 )
 
 lazy val app = (project in file("."))
